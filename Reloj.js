@@ -18,9 +18,4 @@ function cerrarVentana() {
 
 }
 
-function cerrarVentana2() {
-
-      window.close();
-
-}
 
