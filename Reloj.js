@@ -9,6 +9,17 @@ function abrirVentana() {
       //Abrimos la ventana
       miVentana = window.open("reloj.html", "", propiedades);
 
+      //Ponemos el foco en la ventana
+      var fecha = new Date();
+      var hor = fecha.getHours();
+      var min = fecha.getMinutes();
+      var seg = fecha.getSeconds();
+
+      document.getElementById("horas").innerHTML = hor.toLocaleString;
+      document.getElementById("minutos").innerHTML = min.toLocaleString;
+      document.getElementById("segundos").innerHTML = seg.toLocaleString;
+
+
 }
 
 //Funcion para cerrar la ventana

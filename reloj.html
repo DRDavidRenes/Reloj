@@ -5,19 +5,31 @@
       <meta charset="utf-8">
       <title>Reloj.html</title>
       <script src="Reloj.js"></script>
-      <link rel="stylesheet" src="estilos.css">
+      <!--<link rel="stylesheet" href="estilos.css">-->
 
+      
 
 
 </head>
 
 <body>
 
+      hora: <input type="text" size="5" id="horas"/>
+      
+      <!--Creamos un marco donde mostraremos la hora actual-->
+      <div id="marco">
+            <div id="horas"></div>
+            <div>:</div>
+            <div id="minutos"></div>
+            <div>:</div>
+            <div id="segundos"></div>
+      </div>
+
       <!--Creamos un botón para cerrar la ventana-->
 
       <p align="center">
-            <br><br><br><br><br><br><br><br>
-            <button id="btreloj" type="button" onclick="cerrarVentana();">Cerrar</button>
+            <br><br><br><br><br>
+            <button id="btreloj" type="button" onclick="cerrarVentana();"><b>Cerrar</b></button>
       </p>
 
 </body>
