@@ -19,6 +19,7 @@ var hor = fecha.getHours();
 var min = fecha.getMinutes();
 var seg = fecha.getSeconds();
 var contador = 0;
+
 function actualizar() {
 
       //Mostramos la hora en la ventana
@@ -27,8 +28,9 @@ function actualizar() {
       document.getElementById("segundos").innerHTML = seg;
 
       //ACTUALIZAMOS LA HORA, MINUTOS Y SEGUNDOS
-      
+
       //Inicializamos el contador y sumamos 1, después si el contador y los segundos son iguales, sumamos 1 al minuto y reiniciamos el contador
+
       contador++;
       seg = fecha.getSeconds() + contador;
       if (contador == 60) {
@@ -45,7 +47,7 @@ function actualizar() {
             min = 0;
             hor++;
       }
-      //Si los segundos llegan a 60, se reinician y se aumenta un minuto
+      //Si los segundos llegan a 60, se reinician
       if (seg == 60) {
             seg = 0;
       }
@@ -57,7 +59,7 @@ function actualizar() {
       }
 
 
-      //Cuando los minutos esten por debajo de 10, se le añade un 0 delante
+      //Cuando los segundos esten por debajo de 10, se le añade un 0 delante
       if (seg < 10) {
             seg = parseInt(seg);
             seg = "0" + seg;
@@ -65,8 +67,10 @@ function actualizar() {
 
       //Llamamos a setTimeout para que se ejecute cada segundo
       setTimeout(actualizar, 1000);
-
 }
+
+
+
 
 //Funcion para cerrar la ventana
 function cerrarVentana() {
@@ -75,4 +79,5 @@ function cerrarVentana() {
 
 //Al cargar la web se pone en marcha el reloj
 window.onload = actualizar;
+
 
