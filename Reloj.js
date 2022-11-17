@@ -29,10 +29,14 @@ function actualizar() {
 
       //ACTUALIZAMOS LA HORA, MINUTOS Y SEGUNDOS
 
-      //Inicializamos el contador y sumamos 1, después si el contador y los segundos son iguales, sumamos 1 al minuto y reiniciamos el contador
+      // Inicializamos el contador = a seg,(que son los segundos reales) luego contador vamos sumando 1     
+      // y volvemos a igualar los seg a contador para cuando actualiza cada segundo sea con la hora actual
+      // luego cuando el contador llega a 60, se reinicia a 0 y se suma 1 a los minutos
+      // y asi sucesivamente hasta llegar a las 24 horas
 
+      contador= seg;
       contador++;
-      seg = fecha.getSeconds() + contador;
+      seg =  contador;
       if (contador == 60) {
             contador = 0;
             seg = 0;
