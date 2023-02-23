@@ -1,9 +1,9 @@
 //Programa para ver un reloj digital en una ventana emergente
 
-function abrirVentana() {
+let abrirVentana = () => {
 
       //Declaramos todas las propiedades de la ventana
-      var propiedades = "width=300, height=200, top=100, left=200, resizable=no, scrollbars=no, location=no";
+      let propiedades = "width=300, height=200, top=100, left=200, resizable=no, scrollbars=no, location=no";
 
       //Abrimos la ventana
       miVentana = window.open("reloj.html", "", propiedades);
@@ -14,13 +14,13 @@ function abrirVentana() {
 //Creamos una funcion para actualizar la hora
 
 //Creamos las variables fuera para que sean globales
-var fecha = new Date();
-var hor = fecha.getHours();
-var min = fecha.getMinutes();
-var seg = fecha.getSeconds();
-var contador = 0;
+let fecha = new Date();
+let hor = fecha.getHours();
+let min = fecha.getMinutes();
+let seg = fecha.getSeconds();
+let contador = 0;
 
-function actualizar() {
+let actualizar = () => {
 
       //Mostramos la hora en la ventana
       document.getElementById("horas").innerHTML = hor;
@@ -34,9 +34,9 @@ function actualizar() {
       // luego cuando el contador llega a 60, se reinicia a 0 y se suma 1 a los minutos
       // y asi sucesivamente hasta llegar a las 24 horas
 
-      contador= seg;
+      contador = seg;
       contador++;
-      seg =  contador;
+      seg = contador;
       if (contador == 60) {
             contador = 0;
             seg = 0;
@@ -77,7 +77,7 @@ function actualizar() {
 
 
 //Funcion para cerrar la ventana
-function cerrarVentana() {
+let cerrarVentana = () => {
       window.close();
 }
 
